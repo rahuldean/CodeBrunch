@@ -96,21 +96,39 @@ int List::GetLength() const
 
 void List::DeleteItem(int item)
 {
-    Node* temp = start;
-    while(temp != NULL)
+    if(start != NULL)
     {
-        Node* target;
+        Node* temp = start;
         
-        // check current + 1
-        if (temp->next != NULL && temp->next->data == item)
+        // if item is in first node
+        if(start->data == item)
         {
-            target = temp->next;
-            temp->next = target->next;
-            delete target;
+            start = start->next;
+            delete temp;
             length--;
         }
-        
-        temp = temp->next;
-        
+        else
+        {
+            // traverse till you find data in n+1
+            while(temp->next != NULL && temp->next->data != item)
+            {
+                temp = temp->next;
+            }
+            
+            /* Let LL be: W---->X--->Y--->Z
+             * if Y has our item
+             * At this point temp will point to X (or be null if not found anywhere in list)
+             * We need to delete Y, while we link X to Z
+             */
+            
+            Node* target = temp->next; // now target is at Y
+            if(target != NULL)
+            {
+                // link X to Z
+                temp->next = target->next;
+                delete target;
+                length--;
+            }
+        }
     }
 }

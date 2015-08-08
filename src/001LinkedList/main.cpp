@@ -29,6 +29,7 @@ int main()
     list.InsertItem(72);
     list.InsertItem(21);
     list.InsertItem(21);
+    list.InsertItem(21);
     
     cout << "Length" << list.GetLength() <<endl;
     list.Show();
