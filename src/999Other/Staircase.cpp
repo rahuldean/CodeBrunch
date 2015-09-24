@@ -7,9 +7,9 @@ bool notAnIntegerValue(); // ex: abcd
 void pass(char* message);
 void fail(char* message);
 void makeStairCase(int height);
+void makeStairCase(char* height);
 int main()
 {
-	makeStairCase(10);
 
 	if (validPositiveValue())
 		pass("validPositiveValue");
@@ -35,19 +35,55 @@ int main()
 
 bool validPositiveValue()
 {
-	return false;
+	try	
+	{
+		makeStairCase(10);
+		return true;
+	}
+	catch (exception &ex)
+	{
+		cout << ex.what() << endl;
+		return false;
+	}
 }
 bool invalidNegativeValue()
 {
-	return false;
+	try
+	{
+		makeStairCase(-10);
+		return false;
+	}
+	catch (exception &ex)
+	{
+		cout << ex.what() << endl;
+		return true;
+	}
 }
 bool outOfRangeValue()
 {
-	return false;
+	try
+	{
+		makeStairCase(2001);
+		return false;
+	}
+	catch (exception &ex)
+	{
+		cout << ex.what() << endl;
+		return true;
+	}
 }
 bool notAnIntegerValue()
 {
-	return false;
+	try
+	{
+		makeStairCase("abc");
+		return false;
+	}
+	catch (exception &ex)
+	{
+		cout << ex.what() << endl;
+		return true;
+	}
 }
 void pass(char* message)
 {
@@ -74,4 +110,9 @@ void makeStairCase(int height)
 
 		cout << endl;
 	}
+}
+
+void makeStairCase(char* height)
+{
+	throw runtime_error("invalid height, only integers between 1 & 2000 inclusive are allowed");
 }
