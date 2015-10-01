@@ -68,7 +68,7 @@ void reverseString(char* str)
 
 		cout << "reversed string is =" << str << endl;
 	}
-	catch (bad_exception &a)
+	catch (runtime_error &a)
 	{
 		cout << a.what();
 	}
