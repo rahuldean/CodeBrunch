@@ -28,7 +28,7 @@ char* replaceSpaces(char* text)
 	int spaces = countSpaces(text);
 	size_t requiredSize = strlen(text) + 2 * spaces;
 	//cout << "Required new size = " << requiredSize << endl;
-	char* replacedText = new char[requiredSize];
+	char* replacedText = new char[requiredSize+1];
 	
 	for (size_t i = 0; i < strlen(text); i++)
 	{
@@ -44,9 +44,13 @@ char* replaceSpaces(char* text)
 			*replacedText++ = '0';			
 		}
 	}
+
+	//at the end
+	*replacedText = '\0';
 	// since replacedText is now at the end, rollback to first position
 	for (size_t i = requiredSize;i > 0; i--)
 	{
+		cout << *replacedText << " = ";
 		*(--replacedText);
 	}
 	//delete[]replacedText;
