@@ -3,23 +3,38 @@
 	{
 		"selected_items":
 		[
+			[
+				"c",
+				"count"
+			],
+			[
+				"val",
+				"val2"
+			],
+			[
+				"coll",
+				"collection"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "",
 			"file": "src/999Other/0009PlayGround.cpp",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 117,
-				"line_ending": "Unix"
+				"buffer_size": 0,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 87.0,
 		"selected_items":
 		[
 			[
@@ -27,7 +42,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 392.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -44,6 +59,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/ramalkir/Documents/GIT/CodeBrunch/src/999Other/013FindForSumInArray.cpp",
 		"/C/Users/ramalkir/Documents/GIT/CodeBrunch/src/001LinkedList/main.cpp",
 		"/Users/RahulReddy/Desktop/PortionToPrepare"
 	],
@@ -88,20 +104,21 @@
 					"file": "src/999Other/0009PlayGround.cpp",
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								116,
-								116
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -145,7 +162,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 130.0
+		"height": 116.0
 	},
 	"output.find_results":
 	{
@@ -175,7 +192,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 223.0,
 	"status_bar_visible": true
 }
