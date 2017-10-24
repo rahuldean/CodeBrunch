@@ -9,7 +9,8 @@ import java.util.StringTokenizer;
 
 public class test {
     public static void main (String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("test.in"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader br = new BufferedReader(new FileReader("test.in"));
 
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("test.out")));
         StringTokenizer st = new StringTokenizer(br.readLine());

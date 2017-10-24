@@ -1,4 +1,4 @@
-
+package com.godhc.usaco;
 
 import java.io.*;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ problem = Your Ride Is Here
 public class ride {
     public static void main(String [] args)  throws IOException{
 
-        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader br = new BufferedReader(new FileReader("ride.in"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader br = new BufferedReader(new FileReader("ride.in"));
         String cometName = br.readLine();
         String groupName = br.readLine();
 
